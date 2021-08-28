@@ -18,15 +18,15 @@ from dns.aliyun import AliApi
 #可以从https://shop.hostmonit.com获取
 KEY = os.environ["KEY"]  #"o1zrmHAF"
 #CM:移动 CU:联通 CT:电信
-#修改需要更改的dnspod域名核子域名
+#修改需要更改的dnspod域名和子域名
 DOMAINS = json.loads(os.environ["DOMAINS"])  #{"hostmonit.com": {"@": ["CM","CU","CT"], "shop": ["CM", "CU", "CT"], "stock": ["CM","CU","CT"]},"4096.me": {"@": ["CM","CU","CT"], "vv": ["CM","CU","CT"]}}
 #腾讯云后台获取 https://console.cloud.tencent.com/cam/capi
 SECRETID = os.environ["SECRETID"]    #'AKIDV**********Hfo8CzfjgN'
 SECRETKEY = os.environ["SECRETKEY"]   #'ZrVs*************gqjOp1zVl'
 #默认为普通版本 不用修改
-AFFECT_NUM = 5
+AFFECT_NUM = 2
 #DNS服务商 如果使用DNSPod改为1 如果使用阿里云解析改成2
-DNS_SERVER = 2
+DNS_SERVER = 1
 #解析生效时间，默认为600秒 如果不是DNS付费版用户 不要修改!!!
 TTL = 600
 
